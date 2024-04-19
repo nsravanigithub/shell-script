@@ -1,1 +1,2 @@
-trying to add files all at once,test file 1
+echo "Hello world"
+echo "This is my first script"

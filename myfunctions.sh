@@ -1,6 +1,6 @@
 #!/bin/bash
 
 #functions
-VALIDATE() {
+function VALIDATE() {
     echo "Hello world $1 $2"
 }

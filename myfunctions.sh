@@ -4,4 +4,4 @@
 myfunction(){
     echo "Hello world $1 $2"
 }
-myfunction 
+myfunction $1 $2

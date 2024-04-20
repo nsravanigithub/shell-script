@@ -1,6 +1,6 @@
 #!/bin/bash
+
 #functions
-Hello()
-{
-    echo "Hello world"
+VALIDATE() {
+    echo "Hello world $1 $2"
 }

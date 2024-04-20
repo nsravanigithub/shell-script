@@ -1,6 +1,6 @@
 #declaring the variables
-person1=sravani
-person2=ramu
+person1=ishaan
+person2=sriyan
 
 #referring the variables
 echo "$person1--->Hello $person2, how are you?"

@@ -3,7 +3,7 @@
  #using if condition to find whether given number is greater than or equal to 10
 
  NUMBER=$1
- if [ $NUMBER -gt 10 ]
+ if [ $NUMBER -ge 10 ]
  then
  echo "Given number is greater than 10"
  else

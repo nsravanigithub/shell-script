@@ -10,6 +10,6 @@ echo "Home directory: $HOME"
 echo "which user is running the script: $USER"
 echo "Hostname of the server: $HOSTNAME"
 echo "Process id of the current shell-script: $$"
-sleep 60
-sleep 60&
+#sleep 60
+#sleep 60&
 echo "Process id of the last background command: $!"

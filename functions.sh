@@ -1,6 +1,10 @@
 #!/bin/bash
+
 user=$(id -u)
 #validating root user
+Time=$(date +%Y.%m.%d-%H.%M.%S)
+scriptname=$( echo $0 )
+logfile=/tmp/$scriptname.$Time.log
 
 validate()
 {
@@ -22,7 +26,9 @@ validate()
     fi
 
 
-dnf install mysql -y
+dnf install mysql -y 
+validate($1 logfile)
 validate $? "installing mysql" 
 dnf install git -y
+validate($1 logfile)
 validate $? "installing git"

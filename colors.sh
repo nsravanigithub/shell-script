@@ -5,16 +5,16 @@ user=$(id -u)
 Time=$(date +%Y.%m.%d-%H.%M.%S)
 scriptname=$( echo $0 | cut -d "." -f1) #it cuts the .sh from script name 
 logfile=/tmp/$scriptname.$Time.log
-R=$(\e[31)
-G=$(\e[32)
+R="\e[31m"
+G="\e[32m"
 validate()
 {
     if [ $1 -ne 0 ]
     then
-    echo -e ("$2........$R failure")
+    echo -e "$2........$R failure $N" 
     exit 1
     else
-    echo -e ("$2.....$G Success")
+    echo -e "$2.....$G Success $N"
     fi
 
 }

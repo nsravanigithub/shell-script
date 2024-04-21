@@ -27,8 +27,8 @@ validate()
 
 
 dnf install mysql -y 
-validate($1 logfile)
+validate($? &>>logfile)
 validate $? "installing mysql" 
 dnf install git -y
-validate($1 logfile)
+validate($? &>>logfile)
 validate $? "installing git"

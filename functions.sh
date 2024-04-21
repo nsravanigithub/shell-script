@@ -3,7 +3,7 @@
 user=$(id -u)
 #validating root user
 Time=$(date +%Y.%m.%d-%H.%M.%S)
-scriptname=$( echo $0 )
+scriptname=$( echo $0 | cut -d "." -f1) #it cuts the .sh from script name 
 logfile=/tmp/$scriptname.$Time.log
 
 validate()

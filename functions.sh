@@ -14,5 +14,6 @@ validate()
 }
 
 dnf install mysql -y
-
+validate
 dnf install git -y
+validate

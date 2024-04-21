@@ -1,5 +1,7 @@
 #!/bin/bash
-for i in (i=1; i<=20; i++ )
+i=0
+for $i -le 10
 do
 echo $i
+i=`$i+1`
 done

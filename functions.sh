@@ -14,6 +14,6 @@ validate()
 }
 
 dnf install mysql -y
-validate
+validate $1 $2
 dnf install git -y
-validate
+validate $1 $2

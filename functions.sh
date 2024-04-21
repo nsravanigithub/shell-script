@@ -4,16 +4,24 @@ user=$(id -u)
 
 validate()
 {
-    if [ $? -ne 0 ]
-    then
-    echo "run with root access.. $1"
+    if [$1 ne 0]
+    echo "$2........failure"
     exit 1
     else
-    echo "you are super user... $2"
+    echo "$2..... Success"
     fi
+
 }
+    if [ $? -ne 0 ]
+    then
+    echo "Please run with root access"
+    exit 1
+    else
+    echo "you are super user"
+    fi
+
 
 dnf install mysql -y
-validate $1 $2
+validate $? "installing mysql" 
 dnf install git -y
-validate $1 $2
+validate $? "installing git"

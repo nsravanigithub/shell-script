@@ -26,7 +26,7 @@ validate()
     fi
 
 
-dnf install mysql -y &>>logfile
+dnf install mysql -y &>>logfile  #it will append whatever output u get into the logfile
 
 validate $? "installing mysql" 
 dnf install git -y &>>logfile

@@ -33,9 +33,8 @@ validate()
     if [ $? -eq 0 ]
     then
     echo "$i already installed....SKIPPING"
-
     else
-     dnf install $i -y &>>logfile
+    dnf install $i -y &>>logfile
     Validate $? "Installation of $i"
     fi
 

@@ -35,8 +35,10 @@ validate()
     echo "$i already installed....SKIPPING"
 
     else
-    dnf install $i -y &>>logfile
-    Validate $? "Installation of $i"
+
+    echo "need to install $i"
+    #dnf install $i -y &>>logfile
+    #Validate $? "Installation of $i"
     fi
 
 done

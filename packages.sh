@@ -29,16 +29,14 @@ validate()
     for i in $@
     do
     echo "package to install: $i"
-    dnf install $i &>>$logfile
+    dnf list installed $i &>>$logfile
     if [ $? -eq 0 ]
     then
     echo "$i already installed....SKIPPING"
 
     else
-
-    echo "need to install $i"
-    #dnf install $i -y &>>logfile
-    #Validate $? "Installation of $i"
+     dnf install $i -y &>>logfile
+    Validate $? "Installation of $i"
     fi
 
 done
